@@ -3,18 +3,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Vidly.Models; 
+using Vidly.Models;
+using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
-        // GET: Movies/Random       
-        public ActionResult Random()
+        // GET: Movies
+        public ActionResult Index()
         {
-            var movie = new Movie() { Name = "sherk!" };
+            var movies = new List<Movie>
+            {
+                 new Movie { Name = "sherk" },
+                 new Movie { Name = "Wall-e" }
+            };
 
-            return View(movie);
+            var viewModel = new MovieViewModel
+            {
+                Movies = movies
+  
+            };
+
+            return View(viewModel);
+
         }
+
+        //[Route("movies/released/{year}/{month:regex(\\d{2}):range(1,12)}")]
+        //public ActionResult ByReleaseDate(int year, int month)
+        //{
+        //    return Content(year+"/"+month);
+        //}
     }
 }
