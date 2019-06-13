@@ -6,16 +6,20 @@
 
 <h2>Customers</h2>
 
-<table>
-    <tr>
-        <th>Customer</th>
-    </tr>
-
-    @foreach (var customer in Model.Customers)
-    {
+<table class="table table-striped">
+    <thead>
         <tr>
-            <td>@customer.Name</td>
+            <th>Customers</th>
         </tr>
-    }
+    </thead>
+    <tbody>
+        @foreach (var customer in Model.Customers)
+        {
+            <tr>
+                <td>@customer.Name</td>
+            </tr>
+        }
+    </tbody>
+
 </table>
 

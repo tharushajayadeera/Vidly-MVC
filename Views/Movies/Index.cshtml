@@ -6,16 +6,20 @@
 
 <h2>Movies</h2>
 
-<table>
-    <tr>
-        <th>Movie</th>
-    </tr>
-
-    @foreach (var movie in Model.Movies)
-    {
+<table class="table table-striped">
+    <thead>
         <tr>
-            <td>@movie.Name</td>
+            <th>Movie</th>
         </tr>
-    }
+    </thead>
+    <tbody>
+        @foreach (var movie in Model.Movies)
+        {
+            <tr>
+                <td>@movie.Name</td>
+            </tr>
+        }
+    </tbody>
+    
 </table>
 

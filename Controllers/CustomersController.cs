@@ -16,7 +16,9 @@ namespace Vidly.Controllers
             var customers = new List<Customer>
             {
                 new Customer { Name = "John Smith" },
-                new Customer { Name = "Mary Williams" }
+                new Customer { Name = "Mary Williams" },
+                new Customer { Name = "Tharusha Jayadeera" },
+                new Customer { Name = "Sam Cornish" }
             };
 
             var viewModel = new CustomerViewModel
